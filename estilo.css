@@ -37,48 +37,53 @@ main{
 p{
     font-family: 'Open Sans Condensed', sans-serif;
 }
-div div{
+.tarjeta{
     margin:0.5vw;
     border-radius: 10px;
     border:1px solid black;
     position: relative;
 }
-img{
-    width:100%;
-}
-.front, .back{
-    width: 95%;
-    position: absolute;
-    bottom:0;
-    margin:0;
-    border: none;
 
+.front{
+    width:100%;
+    height: 100%;
+    position: absolute;
+    border: none;
+    backface-visibility: hidden;
 }
 .back{
     visibility: hidden;
 }
+
 .giro{
     transform: rotateY(180deg);
 }
 .interior{
+    width: 100%;
+    height: 100%;
     transform-style:preserve-3d;
+}
 
-}
-.back, .front{
-    backface-visibility: hidden;
-}
 .boton{
     border:1px solid whitesmoke;
-    margin:0.5vw;
-    width: 100%;
+    border-radius: 10px;
+    margin:0.4vw;
+    width: 95%;
     height:4vw;
-    position: relative;
-    top:100;
+    
+    bottom:0;
+    position: absolute;
     cursor: pointer;
     background-color: #336A75;
     opacity: 0;
+    
     transition:all;
     transition-duration:1s;
+}
+.back p{
+    width: 90%;
+    margin:auto;
+    text-align: center;
 }
 .boton p{
     width:60%;
@@ -143,12 +148,12 @@ img{
 .small img{
    margin-top:1vw;
 }
-.rayquazaCont{
+.tarjetaRayquaza{
     position: relative;
     grid-column-end: span 2;
     grid-row-end: span 2;
 }
-.shayminCont{
+.tarjetaShaymin{
     position:relative;
     grid-column-end: span 2;
 }
@@ -166,47 +171,47 @@ img{
     background-position: center;
     background-size: cover;
 }
-.rayquazaCont{
+.tarjetaRayquaza{
     background: url(./images/rayquaza.png), var(--darkBlueGradient);
     background-position: center;
     background-size: cover;
 }
-.treeckoCont{
+.tarjetaTreecko{
     background: url(./images/treecko.png), var(--darkBlueGradient);
     background-position: center;
     background-size: cover;
 }
-.lucarioCont{
+.tarjetaLucario{
     background: url(./images/lucario.png), var(--darkBlueGradient);
     background-position: center;
     background-size: cover;
 }
-.shayminCont{
+.tarjetaShaymin{
     background: url(./images/shaymin.png);
     background-position: center;
     background-size: cover;
 }
-.eveeCont{
+.tarjetaEvee{
     background: url(./images/eevee.png), var(--darkBlueGradient);
     background-position: center;
     background-size: cover;
 }
-.luxrayCont{
+.tarjetaLuxray{
     background: url(./images/luxray.png), var(--darkBlueGradient);
     background-position: center;
     background-size: cover;
 }
-.totodileCont{
+.tarjetaTotodile{
     background: url(./images/totodile.png), var(--darkBlueGradient);
     background-position: center;
     background-size: cover;
 }
-.mimikyuCont{
+.tarjetaMimikyu{
     background: url(./images/mimikyu.png), var(--darkBlueGradient);
     background-position: center;
     background-size: cover;
 }
-.darkraiCont{
+.tarjetaDarkrai{
     background: url(./images/darkrai.png);
     background-position: center;
     background-size: cover;

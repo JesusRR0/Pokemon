@@ -16,7 +16,13 @@
 
 </head>
 <body>
-    
+    <script>
+        $(document).ready(function(){
+            $('.tarjeta').on('click', function(){
+                $(this).find('.interior').toggleClass('giro');
+            });
+        });
+    </script>
     <main>
         <h1>Gotta catch'em all!</h1>
         <h1>Click on the pictures for more info</h1>
@@ -27,7 +33,6 @@
                 <div class="interior">
                     <div class="front articuno articunoCont">
                         <div class="boton">
-                            <div class="color"></div>
                             <p>Articuno</p>
                         </div>
                     </div>
@@ -41,7 +46,6 @@
                 <div class="interior">
                     <div class="front infernape infernapeCont">
                         <div class="boton">
-                            <div class="color"></div>
                             <p>Infernape</p>
                         </div>
                     </div>
@@ -52,11 +56,10 @@
             
             </div>
             
-            <div class="tarjeta tarjetaRayquaza">
+            <div class="tarjeta tarjetaRayquaza big">
                 <div class="interior">
                     <div class="front rayquaza rayquazaCont">
                         <div class="boton">
-                            <div class="color"></div>
                             <p>Rayquaza</p>
                         </div>
                     </div>
@@ -71,7 +74,6 @@
                 <div class="interior">
                     <div class="front treecko treeckoCont">
                         <div class="boton">
-                            <div class="color"></div>
                             <p>Treecko</p>
                         </div>
                     </div>
@@ -86,7 +88,6 @@
                 <div class="interior">
                     <div class="front lucarioCont lucario">
                         <div class="boton">
-                            <div class="color"></div>
                             <p>Lucario</p>
                         </div>
                     </div>  
@@ -97,11 +98,10 @@
                 
             </div>
 
-            <div class="tarjeta tarjetaShaymin">
+            <div class="tarjeta tarjetaShaymin big">
                 <div class="interior">
                     <div class="front shayminCont shaymin">
                         <div class="boton">
-                            <div class="color"></div>
                             <p>Shaymin</p>
                         </div>
                     </div>
@@ -116,7 +116,6 @@
                 <div class="interior">
                     <div class="front eveeCont evee">
                         <div class="boton">
-                            <div class="color"></div>
                             <p>Eevee</p>
                         </div>
                     </div>
@@ -131,7 +130,6 @@
                 <div class="interior">
                     <div class="front luxrayCont luxray">
                         <div class="boton">
-                            <div class="color"></div>
                             <p>Luxray</p>
                         </div> 
                     </div>
@@ -146,7 +144,6 @@
                 <div class="interior">
                     <div class="front totodileCont totodile">
                         <div class="boton">
-                            <div class="color"></div>
                             <p>Totodile</p>
                         </div>
                     </div>
@@ -161,7 +158,6 @@
                 <div class="interior">
                     <div class="front mimikyuCont mimikyu">
                         <div class="boton">
-                            <div class="color"></div>
                             <p>Mimikyu</p>
                         </div>
                     </div>
@@ -172,11 +168,10 @@
                  
             </div>
 
-            <div class="tarjeta tarjetaDarkrai">
+            <div class="tarjeta tarjetaDarkrai big">
                 <div class="interior">
                     <div class="front darkraiCont darkrai">
                         <div class="boton">
-                            <div class="color"></div>
                             <p>Darkrai</p>
                         </div>
                     </div>
@@ -189,11 +184,5 @@
         </div>
     </main>
 </body>
-<script>
-    $(document).ready(function(){
-        $('.tarjeta').on('click', function(){
-            $($this).find('.interior').toggleClass('giro');
-        });
-    });
-</script>
+
 </html>

@@ -1,3 +1,4 @@
+
 *{
     margin:0;
     padding:0;
@@ -5,6 +6,7 @@
 }
 :root{
     --darkBlueGradient:rgb(11,19,43)radial-gradient(circle, rgba(11,19,43,1) 0%, rgba(91,192,190,1) 100%);
+    --colorBoton: rgb(2,0,36)linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(51,106,117,1) 39%, rgba(0,212,255,1) 100%);
 }
 
 body{
@@ -39,20 +41,17 @@ p{
 }
 .tarjeta{
     margin:0.5vw;
-    border-radius: 10px;
-    border:1px solid black;
     position: relative;
 }
 
-.front{
+.front, .back{
     width:100%;
     height: 100%;
     position: absolute;
     border: none;
     backface-visibility: hidden;
-}
-.back{
-    visibility: hidden;
+    border-radius: 10px;
+    border:1px solid black;
 }
 
 .giro{
@@ -62,6 +61,7 @@ p{
     width: 100%;
     height: 100%;
     transform-style:preserve-3d;
+    transition: transform 0.5s linear;
 }
 
 .boton{
@@ -70,20 +70,34 @@ p{
     margin:0.4vw;
     width: 95%;
     height:4vw;
-    
-    bottom:0;
     position: absolute;
+    bottom:0;
     cursor: pointer;
-    background-color: #336A75;
+    background-color:#42ACC2;
     opacity: 0;
-    
     transition:all;
     transition-duration:1s;
 }
+.boton::after{
+    border-radius: 10px;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right:0;
+    top:0;
+    z-index:3;
+    background-color:#C27869;
+    transform-origin: right;
+}
 .back p{
-    width: 90%;
-    margin:auto;
+    width: 80%;
+    border-radius: 10px;
+    padding:0.5vw;
     text-align: center;
+    background-color: rgba(245,245,245,0.5);
+    font-size: 1.5vw;
+    align-self: center;
 }
 .boton p{
     width:60%;
@@ -92,61 +106,42 @@ p{
     padding:0.5vw;
     font-family: 'Courgette', cursive;
     font-size:2vw;
-    opacity: 1;
-    -webkit-text-stroke: 0.5px whitesmoke;
+    -webkit-text-stroke: 1px lightseagreen;
     position:relative;
-    bottom:3.7vw;
+    top:0%;
     
-    transform-origin: left;
-    transform: rotateY(90deg);
 }
 .small{
     position: relative;
     height:15vw;
 }
-.color{
-    border:transparent;
-    border-radius:10px;
-    width: 100%;
-    height: 100%;
-    background-color: #9DFFF0;
-    margin:auto;
-    transform-origin: left;
-    transform:rotateY(90deg);
-}
 .front:hover .boton{
     opacity: 1; 
 }
-.front:hover .boton p{
-    opacity: 1;
-    animation:letra 2s;
-    animation-delay:0.7s;
-    animation-fill-mode: forwards;
-}
-.front:hover .color{
-    animation: colorFondo 2s;
-    animation-delay:0.5s;
+
+.front:hover .boton::after{
+    animation: colorFondo 1s 0.5s;
     animation-fill-mode: forwards;
 }
 .front:hover .boton{
     animation:border 2s ease;
-    animation-delay:2s;
+    animation-delay:1s;
     animation-iteration-count: infinite;
 }
 @keyframes colorFondo{
-    from{transform: rotateY(90deg);}
-    to{transform: rotateY(0deg);}
+    100%{width:0;opacity:1;}
+    0%{width: 100%;}
 }
 @keyframes border{
     0%{box-shadow:none;}
     50%{box-shadow: 0px 0px 10px 5px whitesmoke;}
 }
-@keyframes letra{
-    from{transform: rotateY(90deg);}
-    to{transform: rotateY(0deg);}
-}
+
 .small img{
    margin-top:1vw;
+}
+.big .boton{
+    margin-left: 0.7vw;
 }
 .tarjetaRayquaza{
     position: relative;
@@ -161,57 +156,57 @@ p{
     position:relative;
     grid-column-end: span 2;
 }
-.tarjetaArticuno{
+.articunoCont{
     background: url(./images/articuno.png), var(--darkBlueGradient);
     background-position: center;
     background-size: cover;
 }
-.tarjetaInfernape{
+.infernapeCont{
     background: url(./images/infernape.png),var(--darkBlueGradient);
     background-position: center;
     background-size: cover;
 }
-.tarjetaRayquaza{
+.rayquazaCont{
     background: url(./images/rayquaza.png), var(--darkBlueGradient);
     background-position: center;
     background-size: cover;
 }
-.tarjetaTreecko{
+.treeckoCont{
     background: url(./images/treecko.png), var(--darkBlueGradient);
     background-position: center;
     background-size: cover;
 }
-.tarjetaLucario{
+.lucarioCont{
     background: url(./images/lucario.png), var(--darkBlueGradient);
     background-position: center;
     background-size: cover;
 }
-.tarjetaShaymin{
+.shayminCont{
     background: url(./images/shaymin.png);
     background-position: center;
     background-size: cover;
 }
-.tarjetaEvee{
+.eveeCont{
     background: url(./images/eevee.png), var(--darkBlueGradient);
     background-position: center;
     background-size: cover;
 }
-.tarjetaLuxray{
+.luxrayCont{
     background: url(./images/luxray.png), var(--darkBlueGradient);
     background-position: center;
     background-size: cover;
 }
-.tarjetaTotodile{
+.totodileCont{
     background: url(./images/totodile.png), var(--darkBlueGradient);
     background-position: center;
     background-size: cover;
 }
-.tarjetaMimikyu{
+.mimikyuCont{
     background: url(./images/mimikyu.png), var(--darkBlueGradient);
     background-position: center;
     background-size: cover;
 }
-.tarjetaDarkrai{
+.darkraiCont{
     background: url(./images/darkrai.png);
     background-position: center;
     background-size: cover;
@@ -221,4 +216,19 @@ p{
     background-image: url(./images/pokeball.png);
     background-position: center;
     background-size: cover;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.tarjetaShaymin .back{
+    background-image: url(./images/pokeball2.jpg);
+    background-position: center;
+    background-size: 100%;
+}
+.tarjetaDarkrai .back{
+    background-image: url(./images/pokeball2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-size: 100%;
 }

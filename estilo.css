@@ -129,7 +129,7 @@ p{
     animation-iteration-count: infinite;
 }
 @keyframes colorFondo{
-    100%{width:0;opacity:1;}
+    100%{width:0;}
     0%{width: 100%;}
 }
 @keyframes border{
